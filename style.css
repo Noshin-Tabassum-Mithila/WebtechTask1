@@ -1,0 +1,48 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header style */
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Profile section */
+.profile-box {
+    width: 500px;              /* fixed width */
+    margin: 40px auto;         /* center using margin auto */
+    padding: 20px;             /* padding inside box */
+    background-color: #ffffff; /* light background */
+    border: 2px solid #cccccc; /* border */
+    text-align: center;
+}
+
+/* Student image */
+.profile-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px; /* rounded corners */
+    margin-bottom: 15px;
+}
+
+/* Bio paragraph */
+.bio {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+}
