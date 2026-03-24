@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analyzer</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px;
+        }
+
+        #result {
+            margin-top: 15px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Text Analyzer</h2>
+
+    <textarea id="textInput" placeholder="Write or paste text here..."></textarea>
+    <br>
+
+    <button onclick="analyzeText()">Analyze Text</button>
+
+    <div id="result"></div>
+
+    <script>
+        function analyzeText() {
+            var text = document.getElementById("textInput").value;
+
+            // handle empty input
+            if (text.trim() === "") {
+                document.getElementById("result").innerHTML = "Please enter some text.";
+                return;
+            }
+
+            // character count
+            var charCount = text.length;
+
+            // word count (remove extra spaces)
+            var words = text.trim().split(/\s+/);
+            var wordCount = words.length;
+
+            // reverse text (simple loop)
+            var reversed = "";
+            for (var i = text.length - 1; i >= 0; i--) {
+                reversed += text[i];
+            }
+
+            // display result
+            document.getElementById("result").innerHTML =
+                "<p>Total Characters: " + charCount + "</p>" +
+                "<p>Total Words: " + wordCount + "</p>" +
+                "<p>Reversed Text: " + reversed + "</p>";
+        }
+    </script>
+
+</body>
+</html>
